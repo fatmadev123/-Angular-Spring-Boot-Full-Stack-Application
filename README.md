@@ -9,3 +9,11 @@ Angular Spring Boot CRUD Full Stack Application that is a basic Employee Managem
 - Create Spring Boot Project and Configure MySQL
 - Creating JPA Entity + Repository
 - Creating List Employee REST API (use the Browser and Postman for testing the Rest Api)
+
+# Step 2 :
+
+- Creating Angular App using Angular CLI ( install teh IDE vscode, NodeJS and Angular CLI by the instruction : npm install -g @angular/cli )
+- create Angular application by the instruction : ng new Angular_frontend
+- Add Bootstrap 4 in Angular App
+- Creating Angular Employee List Component(create TypeScript class for Employee, creating Angular ListEmployee Component,creating class employee-Service by the instruction ng generate service employee ou ng g s employee, use HttpClient to call the Rest API)
+- Routing and Navigation in Angular App (how the navigation we will configure)
