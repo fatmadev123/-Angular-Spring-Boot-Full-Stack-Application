@@ -18,9 +18,16 @@ Angular Spring Boot CRUD Full Stack Application that is a basic Employee Managem
 - Creating Angular Employee List Component(create TypeScript class for Employee, creating Angular ListEmployee Component,creating class employee-Service by the instruction ng generate service employee ou ng g s employee, use HttpClient to call the Rest API)
 - Routing and Navigation in Angular App (how the navigation we will configure)
 
-# Step 2 :
+# Step 3 :
 
 - Creating REST API to Save Employee Object
 - Creating Angular Create Employee Component
 - Create Angular Employee Form Handling
 - Connecting Angular with Create Employee REST API
+
+# Step 4 :
+
+- Creating REST API to Get Single Employee Object
+- Creating Update Employee REST API
+- Create Angular Update Employee Component & Form
+- - Connecting Angular with update Employee REST API
