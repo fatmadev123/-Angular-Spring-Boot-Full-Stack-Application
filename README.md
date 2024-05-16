@@ -30,4 +30,9 @@ Angular Spring Boot CRUD Full Stack Application that is a basic Employee Managem
 - Creating REST API to Get Single Employee Object
 - Creating Update Employee REST API
 - Create Angular Update Employee Component & Form
-- - Connecting Angular with update Employee REST API
+- Connecting Angular with update Employee REST API
+
+# Step 5 :
+
+- Creating DELETE REST API to Delete an Employee
+- Connecting Angular with Delete Employee REST API

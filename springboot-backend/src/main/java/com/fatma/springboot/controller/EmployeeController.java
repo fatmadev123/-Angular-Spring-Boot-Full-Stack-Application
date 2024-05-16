@@ -1,11 +1,14 @@
 package com.fatma.springboot.controller;
 
 import java.lang.module.ResolutionException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,15 +43,15 @@ public class EmployeeController {
 		return employeeRepository.save(employee);
 	}
 	
-	// get employee by id rest api
+	//get employee by id rest api
 		@GetMapping("/employees/{id}")
 		public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
 			Employee employee = employeeRepository.findById(id)
 					.orElseThrow(() -> new ResolutionException("Employee not exist with id :" + id));
 			return ResponseEntity.ok(employee);
 		}
-		// update employee rest api
 		
+		//update employee rest api
 		@PutMapping("/employees/{id}")
 		public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails){
 			Employee employee = employeeRepository.findById(id)
@@ -61,6 +64,17 @@ public class EmployeeController {
 			Employee updatedEmployee = employeeRepository.save(employee);
 			return ResponseEntity.ok(updatedEmployee);
 		}
-	
+	//delete Employee rest Api
+		@DeleteMapping("/employees/{id}")
+		public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id)
+		{
+			Employee employee = employeeRepository.findById(id)
+					.orElseThrow(() -> new ResolutionException("Employee not exist with id :" + id));
+			employeeRepository.delete(employee);
+			Map<String, Boolean> response = new HashMap<>();
+			response.put("deleted",Boolean.TRUE);
+			return ResponseEntity.ok(response);
+			
+		}
 
 }
