@@ -36,3 +36,4 @@ Angular Spring Boot CRUD Full Stack Application that is a basic Employee Managem
 
 - Creating DELETE REST API to Delete an Employee
 - Connecting Angular with Delete Employee REST API
+- Creating View Employee Details Functionality
